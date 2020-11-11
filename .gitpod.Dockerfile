@@ -73,9 +73,9 @@ RUN adduser pwuser
 # 2. Install playwright and then delete the installation.
 #    Browsers will remain downloaded in `/home/pwuser/.cache/ms-playwright`.
 #RUN su pwuser -c "mkdir /tmp/pw && cd /tmp/pw && npm init -y && \
-    npm i /tmp/playwright.tar.gz" && \
-    rm -rf /tmp/pw && rm /tmp/playwright.tar.gz
+   # npm i /tmp/playwright.tar.gz" && \
+    #rm -rf /tmp/pw && rm /tmp/playwright.tar.gz
 
 # 3. Symlink downloaded browsers for root user
 #RUN mkdir /root/.cache/ && \
-    ln -s /home/pwuser/.cache/ms-playwright/ /root/.cache/ms-playwright
+    #ln -s /home/pwuser/.cache/ms-playwright/ /root/.cache/ms-playwright
