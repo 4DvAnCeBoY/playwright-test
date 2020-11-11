@@ -1,2 +1,3 @@
 npm i -D @playwright/test
-npm install -D jest jest-playwright-preset playwright
+npm install jest-playwright-preset playwright
+npm install -D jest
