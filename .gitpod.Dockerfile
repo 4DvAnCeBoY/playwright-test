@@ -62,7 +62,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git ssh && \
     npm install -g yarn
 
 # 9. Create the pwuser (we internally create a symlink for the pwuser and the root user)
-cat /etc/shadow | grep root
+RUN cat /etc/shadow | grep root
 #RUN echo "gitpod:root" | chpasswd
 RUN adduser pwuser
 
