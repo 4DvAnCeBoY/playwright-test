@@ -1,5 +1,5 @@
 {
-  "name": "@playwright/test",
+  "name": "pw-test",
   "version": "0.152.0",
   "license": "Apache-2.0",
   "author": {
@@ -14,22 +14,29 @@
     "watch": "tsc --build tsconfig.json --watch",
     "prepare": "npm run build",
     "prepublishOnly": "rm tsconfig.tsbuildinfo && rm -rf out && npm run build",
-    "test": "folio test/"
+    "test-folio": "folio test/",
+    "test": "jest"
   },
   "repository": "github:Microsoft/playwright-test",
   "description": "A test runner for running tests with Playwright.",
   "main": "out/index.js",
   "dependencies": {
     "folio": "=0.3.16",
-    "playwright": "=1.5.2",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "@playwright/test": "^0.152.0",
     "@types/rimraf": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "eslint": "^7.8.1",
     "eslint-plugin-notice": "^0.9.10",
+    "jest": "^26.6.3",
+    "jest-playwright-preset": "^1.4.0",
+    "playwright": "^1.5.2",
     "typescript": "^4.0.2"
-  }
+  },
+  "jest": {
+  "preset": "jest-playwright-preset"
+}
 }
