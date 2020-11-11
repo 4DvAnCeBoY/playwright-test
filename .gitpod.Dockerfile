@@ -59,7 +59,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # 8. Feature-parity with node.js base images.
 RUN apt-get update && apt-get install -y --no-install-recommends git ssh && \
-    npm install -g yarn
+    npm install -g yarn \
+    npm install -g jest-playwright-preset \
+    npm install -g playwright
 
 # 9. Create the pwuser (we internally create a symlink for the pwuser and the root user)
 RUN cat /etc/shadow | grep root
