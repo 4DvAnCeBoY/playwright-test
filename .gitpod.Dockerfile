@@ -62,7 +62,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git ssh && \
     npm install -g yarn
 
 # 9. Create the pwuser (we internally create a symlink for the pwuser and the root user)
-RUN sh -c "echo \"group ALL=(user) NOPASSWD: ALL\" >> /etc/sudoers"
+RUN sh -c "echo \"group ALL=gitpod NOPASSWD: ALL\" >> /etc/sudoers"
 RUN adduser pwuser
 
 # === BAKE BROWSERS INTO IMAGE ===
